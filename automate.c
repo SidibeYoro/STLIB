@@ -39,7 +39,7 @@ lts creer_lts(){
 }
     
 }
-void ajouter_etat(){
+void ajouter_etat(lts *l, etat){
     
 }
 void supprimer_etat(){
