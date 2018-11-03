@@ -40,12 +40,14 @@ lts creer_lts(){
     
 }
 void ajouter_etat(lts *l, etat){
-    
+    if(l->etat==NULL){
+        l->etat=etat;
+    }
 }
 void supprimer_etat(){
     
 }
-void ajouter_transition(){
+void ajouter_transition(trans){
     
 }
 void supprimer_transition(){
