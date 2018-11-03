@@ -29,10 +29,14 @@ lts sauver_lts(){
     
 }
 lts creer_lts(){
-   int etat_initial=0;
-    int etat_final=NULL;
-    trans=NULL;
-    lts lts;
+   lts lts;
+   lts.alphabet=NULL;
+   lts.etat=NULL;
+   lts.etat_final=NULL;
+   lts.etat_initial=0;
+   lts.trans=NULL;
+   return lts;
+}
     
 }
 void ajouter_etat(){
