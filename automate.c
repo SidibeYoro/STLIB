@@ -29,7 +29,10 @@ lts sauver_lts(){
     
 }
 lts creer_lts(){
-   
+   int etat_initial=0;
+    int etat_final=NULL;
+    trans=NULL;
+    
 }
 void ajouter_etat(){
     
