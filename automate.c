@@ -28,13 +28,16 @@ printf("%s",&d);
 lts sauver_lts(){
     
 }
-lts creer_lts(){
+lts* creer_lts(){
+    lts *l;
+    l=(lts*)malloc(sizeof(lts));
    lts lts;
-   lts.alphabet=NULL;
-   lts.etat=NULL;
-   lts.etat_final=NULL;
-   lts.etat_initial=0;
-   lts.trans=NULL;
+   lts->alphabet=NULL;
+   lts->alphabet=NULL;
+   lts->etat=NULL;
+   lts->etat_final=NULL;
+   lts->etat_initial=0;
+   lts->trans=NULL;
    return lts;
 }
     
@@ -47,7 +50,7 @@ void ajouter_etat(lts *l, etat){
 void supprimer_etat(){
     
 }
-void ajouter_transition(trans){
+void ajouter_transition(lts *l, transition *t){
     
 }
 void supprimer_transition(){
