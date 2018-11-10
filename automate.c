@@ -23,6 +23,53 @@ typedef struct lts{
     int *etat_final; //tab : ex 2, 4..
     int nb_trans;   ///nb_etat =nb_trans plus 1;
 }lts;
+void lire_lts(char *filename){
+
+    FILE* fichier = NULL;
+fichier = fopen(filename, "r+");
+
+
+ char texte[256] = "";
+
+ // c= c'est la ligne
+ char c ;
+
+
+
+    if (fichier != NULL)
+    {
+    printf("L'automate lu est la suivante \n");
+
+
+  while (fgets(texte, 256
+               ,fichier) != NULL) {
+        // on admet que le sŽparateur soit : |
+              //  if (t != ',' ) {
+
+                        printf("%s \n ",texte);
+
+
+
+
+
+
+                }
+                        fclose(fichier);
+
+
+    }
+
+    else
+    {
+        // On affiche un message d'erreur si on veut
+        printf("Impossible d'ouvrir le fichier test.txt");
+    }
+
+
+
+
+}
+
 
 
 
