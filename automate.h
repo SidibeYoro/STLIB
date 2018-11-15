@@ -1,39 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/* 
- * File:   automate.h
- * Author: Auchan
- *
- * Created on 27 octobre 2018, 15:23
- */
 
-#ifndef AUTOMATE_H
-#define AUTOMATE_H
 typedef struct transition{
     int depart;
     int arrive;
     char *alphabet;
 }transition;
+
 typedef struct lts{
-    char **alphabet;
-    int* etat;
-    transition *trans;
-    int etat_initial;
-    int *etat_final;
+    char **alphabet;//tab ex manger, boire....
+    int* etat;   //tab etat ex,:  1, 2, 3...
+	int etat_initial; //1
+	transition *trans; ///tabde trans ex/t1, t2,...
+    int *etat_final; //tab : ex 2, 4..
+    int nb_trans;   ///nb_etat =nb_trans plus 1;
 }lts;
-void lire_lts(FILE*F);
+
+void lire_lts(char *filename);
 lts sauver_lts();
 lts  creer_lts();
 void ajouter_etat();
 void supprimer_etat();
 void ajouter_transition();
 void supprimer_transition();
-
-
-
-#endif /* AUTOMATE_H */
-
