@@ -36,8 +36,6 @@ fichier = fopen(filename, "r+");
  // c= c'est la ligne
  char c ;
 
-
-
     if (fichier != NULL)
     {
     printf("L'automate lu est la suivante \n");
@@ -50,14 +48,8 @@ fichier = fopen(filename, "r+");
 
                         printf("%s \n ",texte);
 
-
-
-
-
-
                 }
                         fclose(fichier);
-
 
     }
 
@@ -132,19 +124,33 @@ int main() {
 	ajouter_transition(&l,new_transition(l,"dormir"));
 	afficher_lts(l);
 	printf("\n");
-char * file = "file2.txt";
+char * file = "file.txt";
 
 	lire_lts(file);
 
 
-	 Liste *maListe = initialisation();
+// tet ListeChainee
 
-    insertion(maListe, 4);
-   insertion(maListe, 8);
-   insertion(maListe, 15);
-    suppression(maListe);
+   element *numbers = NULL;
 
-    afficherListe(maListe);
+    //
+    numbers = add_head(numbers, 2);
+    numbers = add_head(numbers, 5);
+    numbers = add_head(numbers, 8);
+    //
+
+
+    //sort_insertion(numbers, &numbers_sorted);
+    //
+    print_list(numbers);
+   //suppression_head(numbers);
+   suppression_queue(numbers);
+
+
+    print_list(numbers);
+
+    free_list(&numbers);
+
 
 
 
