@@ -108,6 +108,7 @@ void supprimer_etat(lts *l, int e);
  * \brief ajoute une transition t dans un lts
  * @param l pointeur de type lts
  * @param t pointeur de type transition
+ * \bug    Cette fonction comporte quelques bugs au niveau de la partie si la pile est pleine
 */
 
 void ajouter_transition(lts *l, transition *t);
