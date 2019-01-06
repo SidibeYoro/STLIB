@@ -1,3 +1,11 @@
+/**
+* \author ADJEODA Firdaws DIAGNE Awa SADAOUI Kamilia
+* \brief Projet C sur les automates
+* \version 1.0
+* \date 7 janvier 2019
+* Programme 
+
+**/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -43,7 +51,7 @@ fichier = fopen(filename, "r+");
 
   while (fgets(texte, 256
                ,fichier) != NULL) {
-        // on admet que le séparateur soit : |
+        // on admet que le s≈Ωparateur soit : |
               //  if (t != ',' ) {
 
                         printf("%s \n ",texte);
