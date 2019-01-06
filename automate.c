@@ -3,7 +3,7 @@
 * \brief Projet C sur les automates
 * \version 1.0
 * \date 7 janvier 2019
-* Programme 
+* Programme de création de librairies permettant de travailler avec des automates etiquetés
 
 **/
 
