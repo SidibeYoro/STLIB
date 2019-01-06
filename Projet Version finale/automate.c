@@ -10,7 +10,7 @@
  * \date       05 Janvier 2019
  * \brief      Implémentation de l'ensemble de nos fonctions pour les LTS.
  *
- * \details    Cette fichier implémente les differentes fonctions pour la mise en place d'un lts
+ * \details    Ce fichier implémente les differentes fonctions pour la mise en place d'un lts
  *                  de la création à l'affichage en passant par l'ajout et la suppression des etats et transitions.
  */
 
