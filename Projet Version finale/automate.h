@@ -1,7 +1,20 @@
 /**
- * \brief      Structure trnasiiton.
- * \details   Cette structure nous permettra d'acceder ˆ un etat de depart , d'arrivŽe , aux alphabets , ainsi qu'ˆ la transition suivante
+ * \file       automate.c
+ * \author     Yoro , Awa , Firdaws , Kamilia
+ * \version    1.@
+ * \date       05 Janvier 2019
+ * \brief      Implementation de l'ensemble de nos fonctions pour les LTS.
+ *
+ * \details    C'est dans ce fichier qu'on defini habituellement le prototype des fonctions qui seront implementes dans le fichier.c
+ *                  .
  */
+
+/**
+ * \brief      Structure trnasiiton.
+ *
+ * \details   Cette structure nous permettra d'acceder a un etat de depart , d'arrivee , aux alphabets , ainsi qu'a la transition suivante
+ */
+
 typedef struct transition{
     int depart;
     int arrive;
@@ -12,7 +25,7 @@ typedef struct transition{
 
 /**
  * \brief      Structure LTS.
- * \details   Principale structure de notre programme , elle nous permet d'acceder ˆ l'ensemble des donnees du programme.
+ * \details   Principale structure de notre programme , elle nous permet d'acceder a l'ensemble des donnees du programme.
  */
 
 typedef struct lts{
@@ -62,6 +75,7 @@ lts *write_lts(char *filename);
 
 /**
  * \brief cree un lts vide
+ * \deprecated Fonction depreciee, ne plus utiliser
  */
 
  lts *creer_lts();
@@ -84,7 +98,7 @@ int estpleine(lts *l);
 /**
  * \brief ajoute un etat e dans un lts
  * @param l pointeur de type lts
- * @param e l'etat ˆ ajouter de type int
+ * @param e l'etat a ajouter de type int
 */
 
 void ajouter_etat(lts *l, int e);
@@ -99,7 +113,9 @@ void afficher_lts(lts * l);
 /**
  * \brief supprime un etat e dans un lts
  * @param l pointeur de type lts
- * @param e , l'etat a supprimer de type int
+ * @param e l'etat a supprimer de type int
+ * \deprecated Cette fonction comporte quelques bugs au niveau de la partie si la pile est pleine
+
 */
 
 void supprimer_etat(lts *l, int e);
@@ -108,13 +124,13 @@ void supprimer_etat(lts *l, int e);
  * \brief ajoute une transition t dans un lts
  * @param l pointeur de type lts
  * @param t pointeur de type transition
- * \bug    Cette fonction comporte quelques bugs au niveau de la partie si la pile est pleine
+ * \deprecated Fonction dépréciée, ne plus utiliser
 */
 
 void ajouter_transition(lts *l, transition *t);
 
 /**
- * \brief crŽer une nouvelle transition , c'est comme si elle alloue de la memoire pour une transition donnŽ .
+ * \brief creer une nouvelle transition , c'est comme si elle alloue de la memoire pour une transition donne .
  * @param l pointeur de type lts
  * @param al pointeur de type char
 
@@ -122,3 +138,10 @@ void ajouter_transition(lts *l, transition *t);
 
 transition*  new_transition(lts *l, char *al);
 
+/**
+ * \brief supprime une transition t dans un lts l
+ * @param l pointeur de type lts
+ * @param t pointeur de type transition
+ * \deprecated Fonction dépréciée, ne plus utiliser
+*/
+void supprimer_transition(lts *l, transition *t);

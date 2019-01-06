@@ -13,6 +13,7 @@
  * \details    Cette fichier permet de tester certains fonctions implments dans le fichier automate.c
  *                  .
  */
+
 int main(){
 	lts  *l=creer_lts();
 	ajouter_transition(l,new_transition(l,"manger"));
@@ -41,7 +42,7 @@ int main(){
 	open_lts(file);
 	read_lts(file);
 	write_lts(file);
-    afficher_lts(l);
+
 
 ///	supprimer_etat(l, t.depart);
 	return 0;

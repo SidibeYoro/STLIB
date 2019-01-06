@@ -8,10 +8,10 @@
  * \author     Yoro , Awa , Firdaws , Kamilia
  * \version    1.@
  * \date       05 Janvier 2019
- * \brief      Implémentation de l'ensemble de nos fonctions pour les LTS.
+ * \brief      Implementation de l'ensemble de nos fonctions pour les LTS.
  *
- * \details    Cette fichier implémente les differentes fonctions pour la mise en place d'un lts
- *                  de la création à l'affichage en passant par l'ajout et la suppression des etats et transitions.
+ * \details    Cette fichier implemente les differentes fonctions pour la mise en place d'un lts
+ *                  de la creation a l'affichage en passant par l'ajout et la suppression des etats et transitions.
  */
 
 void open_lts(char *filename){
@@ -181,7 +181,7 @@ transition*  new_transition(lts *l, char *al){
 	return t;
 }
 
-void supprimer_transition(){
+void supprimer_transition(lts *l, transition *t){
 //if(estVide(t)){
    // printf"on peut rein supprimer"
 }
