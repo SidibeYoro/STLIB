@@ -88,7 +88,7 @@ lts *write_lts(char *filename){
 
 
 /**
-* \deprecated 
+* \deprecated Fonction dépréciée, ne plus utiliser !
 void sauver_lts(lts * l, const char * save){
 */
 
@@ -181,10 +181,14 @@ transition*  new_transition(lts *l, char *al){
 	}
 	return t;
 }
-
+/**
+* \deprecated Fonction dépréciée, ne plus utiliser !
 void supprimer_transition(){
 //if(estVide(t)){
    // printf"on peut rein supprimer"
 }
+
+*/
+
 
 
