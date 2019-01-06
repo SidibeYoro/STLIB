@@ -8,10 +8,10 @@
  * \author     Yoro , Awa , Firdaws , Kamilia
  * \version    1.@
  * \date       05 Janvier 2019
- * \brief      Implémentation de l'ensemble de nos fonctions pour les LTS.
+ * \brief      ImplÃ©mentation de l'ensemble de nos fonctions pour les LTS.
  *
- * \details    Cette fichier implémente les differentes fonctions pour la mise en place d'un lts
- *                  de la création à l'affichage en passant par l'ajout et la suppression des etats et transitions.
+ * \details    Cette fichier implÃ©mente les differentes fonctions pour la mise en place d'un lts
+ *                  de la crÃ©ation Ã  l'affichage en passant par l'ajout et la suppression des etats et transitions.
  */
 
 void open_lts(char *filename){
@@ -87,9 +87,10 @@ lts *write_lts(char *filename){
 }
 
 
-
+/**
+* \deprecated 
 void sauver_lts(lts * l, const char * save){
-
+*/
 
 }
 lts *creer_lts(){
@@ -141,7 +142,7 @@ void supprimer_etat(lts *l, int e){
     else
     if(estpleine(l)){
         tmp=l->etat;
-         printf("je donne le numero de l'etat à supprimer");
+         printf("je donne le numero de l'etat Ã  supprimer");
          scanf("%d",&e);
          lts *r=recherche_etat(l,e);
     }
