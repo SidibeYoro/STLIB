@@ -1,5 +1,5 @@
 /**
-* \author ADJEODA Firdaws DIAGNE Awa SADAOUI Kamilia
+* \author ADJEODA Firdaws DIAGNE Awa SADAOUI Kamilia SIDIBE Yoro
 * \brief Projet C sur les automates
 * \version 1.0
 * \date 7 janvier 2019
