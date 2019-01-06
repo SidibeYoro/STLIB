@@ -21,8 +21,15 @@
 
 
 /*lts sauver_lts(){
-
 }  */
+
+/**
+* \fn creer_lts()
+* \brief Fonction de création de notre automate lts
+* \param null
+* \return Instance nouvelle de l'automate
+*/
+
 lts creer_lts(){
    lts lts;//=calloc(1,sizeof(lts));
    lts.alphabet=(char**)malloc(sizeof(char*)*(MAX_T+1));;
@@ -33,6 +40,12 @@ lts creer_lts(){
    return lts;
 }
 
+/**
+* \fn void lire_lts(char *filename)
+* \brief Fonction de lecture des fichiers dans notre automate
+* \param filename fichier contenant les différentes actions
+* \return null
+*/
 void lire_lts(char *filename){
 
     FILE* fichier = NULL;
