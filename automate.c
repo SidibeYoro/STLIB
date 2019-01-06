@@ -19,8 +19,8 @@
 
 // tout d'abord on met en place nos fonctions pour faire marcher les liste chainees
 
-
-/*lts sauver_lts(){
+/** deprecated Fonction dépréciée, ne plus utiliser
+lts sauver_lts(){
 }  */
 
 /**
@@ -80,11 +80,15 @@ fichier = fopen(filename, "r+");
         printf("Impossible d'ouvrir le fichier test.txt");
     }
 
-
-
-
 }
 
+
+/**
+* \fn void ajouter_etat(lts *l, int e)
+* \brief Fonction permettant d'ajouter des états dans notre automate lts
+* \param e Etats
+* \return null
+*/
 void ajouter_etat(lts *l, int e){
 	if(!l->nb_trans)
     	l->etat[0]=e;
@@ -92,6 +96,12 @@ void ajouter_etat(lts *l, int e){
     l->etat[l->nb_trans]=e;
 }
 
+/**
+* \fn void afficher_lts(lts l)
+* \brief Fonction permettant d'afficher notre automate
+* \param l Automate lts
+* \return null
+*/
 void afficher_lts(lts l){
 	int i=0;
 	printf("(%d)",l.trans[i].depart);
@@ -100,11 +110,26 @@ void afficher_lts(lts l){
 		printf("%s",l.trans[i].alphabet);
 		printf("----(%d)",l.trans[i].arrive);
 	}
+	
 
+/**
+* \fn void supprimer_etat()
+* \brief Fonction permettant de supprimer un état dans notre automate
+* \param null
+* \return null
+*/
+	
 }
-void supprimer_etat(){
+void supprimer_etat(){	
+}
 
-}
+/**
+* \fn void ajouter_transition(lts *l, transition t)
+* \brief Fonction permettant d'ajouter des transitions entre états dans notre automate
+* \param l Pointeur sur un objet de type l
+* \param2 t Transition
+* \return null
+*/
 void ajouter_transition(lts *l, transition t){
    if((l->nb_trans+1)<=MAX_T && !l->nb_trans){
    		ajouter_etat(l,t.depart);
@@ -119,6 +144,14 @@ void ajouter_transition(lts *l, transition t){
 
 }
 
+/**
+* \fn transition  new_transition(lts l, char *al)
+* \brief Fonction permettant de créer une nouvelle transition
+* \param l Automate
+* \param2 al Pointeur sur un objet de type al
+* \return null
+*/
+
 transition  new_transition(lts l, char *al){
 	transition t;
 	t.alphabet=al;
@@ -132,10 +165,23 @@ transition  new_transition(lts l, char *al){
 	return t;
 }
 
+/**
+* \fn void supprimer_transition()
+* \brief Fonction permettant de supprimer une transition
+* \param null
+* \return null
+*/
+
 void supprimer_transition(){
 
 }
 
+/**
+ * \fn int main()
+ * \brief Entrée du programme.
+ *
+ * \return 0 if OK, 1 if KO
+ */
 
 int main() {
 
